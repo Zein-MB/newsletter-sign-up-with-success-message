@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.faded {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  width: 60%;
+  padding: 20px;
+  border-radius: 25px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+  box-shadow: 0 20px 50px -5px hsl(234, 29%, 20%), 0 20px 50px 0 hsl(235, 18%, 26%);
+}
+main section,
+main picture {
+  transition: 0.1s 0.2s;
+}
+main section {
+  padding: 3.8rem 2rem;
+  display: grid;
+  gap: 15px;
+  flex-basis: 50%;
+}
+main section h1 {
+  font-size: 3.5rem;
+  color: hsl(234, 29%, 20%);
+}
+main section h1 + p {
+  color: hsl(235, 18%, 26%);
+  line-height: 1.5;
+}
+main section .features {
+  display: grid;
+  gap: 10px;
+}
+main section .features div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+main section form {
+  margin-top: 20px;
+  position: relative;
+}
+main section form label {
+  color: hsl(234, 29%, 20%);
+  font-weight: bold;
+  font-size: 14px;
+}
+main section form small {
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  font-weight: 700;
+  color: hsl(4, 100%, 67%);
+  transition: 0.2s;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main section form input {
+  display: block;
+  margin-block: 10px;
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid rgba(146, 148, 160, 0.5215686275);
+  border-radius: 8px;
+  font-size: 18px;
+  color: #757575;
+  transition: 0.2s;
+}
+main section form input.error {
+  background-color: #fbe9e7;
+  color: hsl(4, 100%, 67%);
+  border-color: hsl(4, 100%, 67%) !important;
+}
+main section form input::-moz-placeholder {
+  color: rgba(146, 148, 160, 0.4784313725);
+  -moz-transition: 0.2s;
+  transition: 0.2s;
+}
+main section form input::placeholder {
+  color: rgba(146, 148, 160, 0.4784313725);
+  transition: 0.2s;
+}
+main section form input:focus {
+  outline: none;
+  border-color: hsl(231, 7%, 60%);
+}
+main section form input:focus::-moz-placeholder {
+  opacity: 0;
+}
+main section form input:focus::placeholder {
+  opacity: 0;
+}
+main section form button {
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(to right, hsl(234, 29%, 20%) 100%, hsl(345.84, 100%, 65.09%), hsl(4, 100%, 67%));
+  color: hsl(0, 0%, 100%);
+  padding: 18px 30px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+main section form button:hover {
+  background: linear-gradient(to right, hsl(345.84, 100%, 65.09%), hsl(4, 100%, 67%));
+  box-shadow: 0 20px 20px -10px hsla(4, 100%, 67%, 0.489);
+}
+
+.success-message {
+  padding: 40px 50px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 25px;
+  width: 31%;
+  display: grid;
+  grid-gap: 30px;
+  transition: 0.5s;
+  box-shadow: 0 20px 50px -5px hsl(234, 29%, 20%), 0 20px 50px 0 hsl(235, 18%, 26%);
+}
+.success-message h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+.success-message p {
+  color: hsl(235, 18%, 26%);
+  line-height: 1.5;
+}
+.success-message p span {
+  font-weight: bold;
+}
+.success-message button {
+  padding: 15px 30px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 6px;
+  margin-block: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  max-height: 48.2px;
+}
+.success-message button:hover {
+  background: linear-gradient(to right, hsl(345.84, 100%, 65.09%), hsl(4, 100%, 67%));
+  box-shadow: 0 20px 20px -10px hsla(4, 100%, 67%, 0.489);
+}
+
+@media (max-width: 767px) {
+  body main {
+    width: 100%;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    padding: 0;
+    border-radius: 0;
+  }
+  body main section {
+    gap: 25px;
+    padding-top: 20px;
+  }
+  body main section h1 {
+    font-size: 3rem;
+  }
+  body main section p {
+    font-size: 20px;
+  }
+  body main section .features div {
+    align-items: flex-start;
+  }
+  body main picture img {
+    width: 100%;
+    display: block;
+  }
+  body .success-message {
+    width: 100%;
+    height: 100%;
+    gap: 0;
+    border-radius: 0;
+    place-content: space-evenly;
+  }
+}
+@media (max-width: 1286px) {
+  main {
+    width: 98%;
+  }
+  .success-message {
+    width: 50%;
+  }
+}/*# sourceMappingURL=main.css.map */

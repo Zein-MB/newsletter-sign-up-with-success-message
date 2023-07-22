@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+
+  <body>
+    <main class="faded">
+        <section class="faded">
+          <!-- Sign-up form start -->
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <div class="features">
+            <div>
+              <div class="img-cont">
+                <img src="./assets/images/icon-list.svg" alt="" />
+              </div>
+              <p>Product discovery and building what matters</p>
+            </div>
+            <div>
+              <div class="img-cont">
+                <img src="./assets/images/icon-list.svg" alt="" />
+              </div>
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <div>
+              <div class="img-cont">
+                <img src="./assets/images/icon-list.svg" alt="" />
+              </div>
+              <p>And much more!</p>
+            </div>
+          </div>
+          <form action="">
+            <div>
+              <label>Email address</label>
+              <small id="errorMessage">Valid email required</small>
+              <input type="text" placeholder="email@company.com" />
+            </div>
+            <button type="submit">Subscribe to monthly newsletter</button>
+          </form>
+          <!-- Sign-up form end -->
+        </section>
+        <picture class="faded">
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" />
+        </picture>
+    </main>
+    <script src="script/main.js" type="module"></script>
+  </body>
+</html>
