@@ -30,6 +30,7 @@ a {
 .faded {
   opacity: 0;
   transform: translateY(-30px);
+  z-index: -1;
 }
 
 // Desktop View
@@ -162,6 +163,7 @@ main {
 
 // Success Message
 .success-message {
+  position: absolute;
   padding: 40px 50px;
   background-color: $White;
   border-radius: 25px;
@@ -195,6 +197,10 @@ main {
     cursor: pointer;
     transition: .2s;
     max-height: 48.2px;
+
+    a {
+      width: 100%;
+    }
   
     &:hover {
       background: linear-gradient(

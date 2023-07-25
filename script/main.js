@@ -4,8 +4,8 @@ let userEmail = document.querySelector("input"),
   errorMessage = document.getElementById("errorMessage"),
   form = document.forms[0],
   signUp = document.querySelector("main"),
-  section = document.querySelector('section'),
-  picture = document.querySelector('picture'),
+  section = document.querySelector("section"),
+  picture = document.querySelector("picture"),
   scMsg = document.querySelector(".success-message");
 
 userEmail.addEventListener("keyup", () => {
@@ -14,7 +14,8 @@ userEmail.addEventListener("keyup", () => {
     userEmail.classList.remove("error");
 
     submitBtn.onclick = () => {
-      window.open("/success.html", "_self");
+      signUp.classList.toggle('faded')
+      scMsg.classList.toggle('faded')
     };
   } else if (!regEx.test(userEmail.value)) {
     errorMessage.style.opacity = "1";
@@ -27,9 +28,11 @@ userEmail.addEventListener("keyup", () => {
 });
 
 function removeFaded(...els) {
-  els.forEach(el => {
-    el.classList.remove('faded')
-  })
+  els.forEach((el) => {
+    el.classList.remove("faded");
+  });
 }
 
-window.addEventListener('load', removeFaded(signUp, section, picture))
+window.addEventListener("load", removeFaded(signUp, section, picture));
+
+// window.addEventListener("load", removeFaded(scMsg));

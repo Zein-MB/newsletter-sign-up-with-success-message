@@ -22,6 +22,7 @@ a {
 .faded {
   opacity: 0;
   transform: translateY(-30px);
+  z-index: -1;
 }
 
 main {
@@ -136,6 +137,7 @@ main section form button:hover {
 }
 
 .success-message {
+  position: absolute;
   padding: 40px 50px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 25px;
@@ -166,6 +168,9 @@ main section form button:hover {
   cursor: pointer;
   transition: 0.2s;
   max-height: 48.2px;
+}
+.success-message button a {
+  width: 100%;
 }
 .success-message button:hover {
   background: linear-gradient(to right, hsl(345.84, 100%, 65.09%), hsl(4, 100%, 67%));
